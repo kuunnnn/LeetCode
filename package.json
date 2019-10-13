@@ -1,0 +1,17 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "author": "hukun",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "standard-version": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
