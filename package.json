@@ -9,6 +9,9 @@
     "commitizen": "^4.0.3",
     "standard-version": "^7.0.0"
   },
+  "standard-version": {
+    "releaseCommitMessageFormat": "chore(changelog): {{currentTag}}"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
