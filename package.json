@@ -2,6 +2,7 @@
   "name": "leetcode",
   "version": "1.0.1",
   "author": "hukun",
+  "type": "module",
   "scripts": {
     "release": "standard-version"
   },
