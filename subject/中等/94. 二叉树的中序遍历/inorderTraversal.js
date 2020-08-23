@@ -1,4 +1,4 @@
-import { expect, buildTree } from "../../../utils/buildTree.mjs";
+import { expect, buildTree } from "../../../utils/test-util.mjs";
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

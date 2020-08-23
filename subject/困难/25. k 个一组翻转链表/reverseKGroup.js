@@ -1,4 +1,4 @@
-import { buildLinkedList, isEquals, linkedListToArray } from "../../../utils/buildTree.mjs";
+import { buildLinkedList, isEquals, linkedListToArray } from "../../../utils/test-util.mjs";
 
 const linkedList = buildLinkedList( [ 1, 2, 3, 4, 5 ] )
 

@@ -154,35 +154,6 @@ export function expect( object, target, desc = "" ) {
   console.log( "%s is Ok!", desc )
 }
 
-/**
- * @param {TreeNode} root
- * @return {number[][]}
- */
-export function levelOrder( root ) {
-  if ( root === null ) return []
-  const queue = [ [ root ] ];
-  const result = [];
-  let nextLevel = [];
-  let currentLevel = [];
-  let currentValue = [];
-  while ( queue.length !== 0 ) {
-    nextLevel = [];
-    currentValue = [];
-    currentLevel = queue.shift()
-    if ( currentLevel.length === 0 ) {
-      break;
-    }
-    for ( let node of currentLevel ) {
-      currentValue.push( node.val )
-      if ( node.left !== null ) nextLevel.push( node.left )
-      if ( node.right !== null ) nextLevel.push( node.right )
-    }
-    result.push( currentValue )
-    queue.push( nextLevel )
-  }
-  return result
-}
-
 function testIsEquals() {
   expect( new Map( [ [ 1, 2 ] ] ), new Map( [ [ 1, 2 ] ] ), "map" )
   expect( new Set( [ 1, 2, 3 ] ), new Set( [ 1, 2, 3 ] ), "set" )

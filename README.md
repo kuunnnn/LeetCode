@@ -1,7 +1,7 @@
 # LeetCode 解题笔记
 
 
-## 简单 ( 36 题 )
+## 简单 ( 40 题 )
 
 * [1. 两数之和](./subject/简单/1.%20两数之和/twoSum.js)
 * [7. 整数反转](./subject/简单/7.%20整数反转/reverse.js)
@@ -22,7 +22,11 @@
 * [107. 二叉树的层次遍历 II](./subject/简单/107.%20二叉树的层次遍历%20II/levelOrderBottom.js)
 * [136. 只出现一次的数字](./subject/简单/136.%20只出现一次的数字/singleNumber.js)
 * [167. 两数之和 II - 输入有序数组](./subject/简单/167.%20两数之和%20II%20-%20输入有序数组/twoSum.js)
+* [189. 旋转数组](./subject/简单/189.%20旋转数组/rotate.js)
+* [217. 存在重复元素](./subject/简单/217.%20存在重复元素/containsDuplicate.js)
+* [219. 存在重复元素 II](./subject/简单/219.%20存在重复元素%20II/containsNearbyDuplicate.js)
 * [278. 第一个错误的版本](./subject/简单/278.%20第一个错误的版本/solution.js)
+* [283. 移动零](./subject/简单/283.%20移动零/moveZeroes.js)
 * [349. 两个数组的交集](./subject/简单/349.%20两个数组的交集/intersection.js)
 * [350. 两个数组的交集 II](./subject/简单/350.%20两个数组的交集%20II/intersect.js)
 * [367. 有效的完全平方数](./subject/简单/367.%20有效的完全平方数/isPerfectSquare.js)

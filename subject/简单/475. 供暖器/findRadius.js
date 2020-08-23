@@ -1,4 +1,4 @@
-import { expect } from "../../../utils/buildTree.mjs";
+import { expect } from "../../../utils/test-util.mjs";
 
 /**
  * @param {number[]} houses

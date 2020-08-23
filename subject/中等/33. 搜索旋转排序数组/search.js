@@ -1,4 +1,4 @@
-import { isEquals } from "../../../utils/buildTree.mjs";
+import { isEquals } from "../../../utils/test-util.mjs";
 
 /**
  * @param {number[]} nums
