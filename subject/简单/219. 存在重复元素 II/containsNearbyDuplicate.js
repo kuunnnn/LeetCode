@@ -11,24 +11,22 @@ import { expect } from "../../../utils/test-util.mjs";
  * 时间复杂度为 O(N) 最差情况会遍历一遍
  * 92ms  42mb
  */
-var containsNearbyDuplicate = function ( nums, k ) {
-  if ( nums.length === 0 || k === 0 ) return false
-  const hashSet = new Set()
-  for ( let i = 0, high = nums.length; i < high; i++ ) {
-    if ( i > k ) {
-      hashSet.delete( nums[ i - k - 1 ] )
+var containsNearbyDuplicate = function (nums, k) {
+  if (nums.length === 0 || k === 0) return false;
+  const hashSet = new Set();
+  for (let i = 0, high = nums.length; i < high; i++) {
+    if (i > k) {
+      hashSet.delete(nums[i - k - 1]);
     }
-    if ( hashSet.has( nums[ i ] ) ) {
-      return true
+    if (hashSet.has(nums[i])) {
+      return true;
     }
-    hashSet.add( nums[ i ] )
+    hashSet.add(nums[i]);
   }
-  return false
+  return false;
 };
-expect( containsNearbyDuplicate( [ 4, 1, 2, 3, 1, 5 ], 3 ), true )
-expect( containsNearbyDuplicate( [ 1, 2, 3, 1 ], 3 ), true )
-expect( containsNearbyDuplicate( [ 1, 2, 3, 1 ], 0 ), false )
-expect( containsNearbyDuplicate( [ 1, 0, 1, 1 ], 1 ), true )
-expect( containsNearbyDuplicate( [ 1, 2, 3, 1, 2, 3 ], 2 ), false )
-
-
+expect(containsNearbyDuplicate([4, 1, 2, 3, 1, 5], 3), true);
+expect(containsNearbyDuplicate([1, 2, 3, 1], 3), true);
+expect(containsNearbyDuplicate([1, 2, 3, 1], 0), false);
+expect(containsNearbyDuplicate([1, 0, 1, 1], 1), true);
+expect(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2), false);

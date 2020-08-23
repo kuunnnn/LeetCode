@@ -5,42 +5,42 @@
  * @return {number}
  * 96ms  38.9mb
  */
-var search = function ( nums, target ) {
+var search = function (nums, target) {
   let low = 0;
   let high = nums.length - 1;
   let mid = 0;
   let result = 0;
-  while ( low <= high ) {
-    mid = low + Math.floor( (high - low) / 2 )
-    if ( nums[ mid ] === target ) {
+  while (low <= high) {
+    mid = low + Math.floor((high - low) / 2);
+    if (nums[mid] === target) {
       break;
     }
-    if ( nums[ mid ] < target ) {
-      low = mid + 1
+    if (nums[mid] < target) {
+      low = mid + 1;
     } else {
-      high = mid - 1
+      high = mid - 1;
     }
   }
   let i = mid;
-  while ( i >= low ) {
-    if ( nums[ i ] === target ) {
-      result++
+  while (i >= low) {
+    if (nums[i] === target) {
+      result++;
     } else {
       break;
     }
-    i--
+    i--;
   }
-  i = mid + 1
-  while ( i <= high ) {
-    if ( nums[ i ] === target ) {
-      result++
+  i = mid + 1;
+  while (i <= high) {
+    if (nums[i] === target) {
+      result++;
     } else {
       break;
     }
-    i++
+    i++;
   }
-  return result
+  return result;
 };
 
-console.log( search( [ 5, 7, 7, 8, 8, 8, 8, 8, 8, 8, 10 ], 8 ) === 7 )
-console.log(search([1,2,3],1)===1)
+console.log(search([5, 7, 7, 8, 8, 8, 8, 8, 8, 8, 10], 8) === 7);
+console.log(search([1, 2, 3], 1) === 1);

@@ -25,41 +25,43 @@
  * @return {number}
  * 204ms 42.7mb
  */
-var romanToInt = function ( s ) {
-  if ( s === "" ) return 0;
-  let result = 0, i = 0, size = s.length;
-  while ( i < size ) {
-    switch ( s[ i ] ) {
+var romanToInt = function (s) {
+  if (s === "") return 0;
+  let result = 0,
+    i = 0,
+    size = s.length;
+  while (i < size) {
+    switch (s[i]) {
       case "M":
         result += 1000;
-        break
+        break;
       case "D":
         result += 500;
         break;
       case "C":
         result += 100;
-        if ( i !== size - 1 ) {
-          if ( s[ i + 1 ] === "D" ) {
+        if (i !== size - 1) {
+          if (s[i + 1] === "D") {
             result += 300;
-            i++
-          } else if ( s[ i + 1 ] === "M" ) {
+            i++;
+          } else if (s[i + 1] === "M") {
             result += 800;
-            i++
+            i++;
           }
         }
         break;
       case "L":
-        result += 50
+        result += 50;
         break;
       case "X":
         result += 10;
-        if ( i !== size - 1 ) {
-          if ( s[ i + 1 ] === "L" ) {
+        if (i !== size - 1) {
+          if (s[i + 1] === "L") {
             result += 30;
-            i++
-          } else if ( s[ i + 1 ] === "C" ) {
+            i++;
+          } else if (s[i + 1] === "C") {
             result += 80;
-            i++
+            i++;
           }
         }
         break;
@@ -67,93 +69,96 @@ var romanToInt = function ( s ) {
         result += 5;
         break;
       case "I":
-        result += 1
-        if ( i !== size - 1 ) {
-          if ( s[ i + 1 ] === "V" ) {
+        result += 1;
+        if (i !== size - 1) {
+          if (s[i + 1] === "V") {
             result += 3;
-            i++
-          } else if ( s[ i + 1 ] === "X" ) {
+            i++;
+          } else if (s[i + 1] === "X") {
             result += 8;
-            i++
+            i++;
           }
         }
         break;
       default:
-        throw TypeError( "unknown character!" )
+        throw TypeError("unknown character!");
     }
-    i++
+    i++;
   }
-  return result
+  return result;
 };
 
 // 和上面思路一致, 略作封装 184ms 43.7mb
-var romanToInt2 = function ( s ) {
-  if ( s === "" ) return 0;
-  let result = 0, i = 0, size = s.length;
+var romanToInt2 = function (s) {
+  if (s === "") return 0;
+  let result = 0,
+    i = 0,
+    size = s.length;
   const r = {
-    "I": 1,
-    "V": 5,
-    "X": 10,
-    "L": 50,
-    "C": 100,
-    "D": 500,
-    "M": 1000,
-  }
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
   const r1 = {
-    "V": 3,
-    "X": 8,
-    "L": 30,
-    "C": 80,
-    "D": 300,
-    "M": 800
-  }
+    V: 3,
+    X: 8,
+    L: 30,
+    C: 80,
+    D: 300,
+    M: 800,
+  };
   let slow = 0;
 
-  function match( a, b ) {
-    if ( slow + 1 !== size ) {
-      if ( s[ slow + 1 ] === a || s[ slow + 1 ] === b ) {
-        result += r1[ s[ slow + 1 ] ]
-        slow++
+  function match(a, b) {
+    if (slow + 1 !== size) {
+      if (s[slow + 1] === a || s[slow + 1] === b) {
+        result += r1[s[slow + 1]];
+        slow++;
       }
     }
   }
 
-  while ( slow < size ) {
-    result += r[ s[ slow ] ]
-    if ( s[ slow ] === "I" ) {
-      match( "V", "X" )
-    } else if ( s[ slow ] === "X" ) {
-      match( "L", "C" )
-    } else if ( s[ slow ] === "C" ) {
-      match( "D", "M" )
+  while (slow < size) {
+    result += r[s[slow]];
+    if (s[slow] === "I") {
+      match("V", "X");
+    } else if (s[slow] === "X") {
+      match("L", "C");
+    } else if (s[slow] === "C") {
+      match("D", "M");
     }
-    slow++
+    slow++;
   }
-  return result
+  return result;
 };
-
 
 // 一种巧妙的方式
 // 180ms 43.2mb
-var romanToInt3 = function ( s ) {
-  if ( s === "" ) return 0;
-  let result = 0, i = 0, size = s.length;
-  const a = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 }
-  while ( i < size ) {
-    if ( i < size - 1 && a[ s[ i ] ] < a[ s[ i + 1 ] ] ) {
-      result -= a[ s[ i ] ]
+var romanToInt3 = function (s) {
+  if (s === "") return 0;
+  let result = 0,
+    i = 0,
+    size = s.length;
+  const a = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  while (i < size) {
+    if (i < size - 1 && a[s[i]] < a[s[i + 1]]) {
+      result -= a[s[i]];
     } else {
-      result += a[ s[ i ] ]
+      result += a[s[i]];
     }
-    i++
+    i++;
   }
-  return result
+  return result;
 };
 
-function test( fn ) {
-  console.log( fn( "III" ) === 3 )
-  console.log( fn( "IV" ) === 4 )
-  console.log( fn( "CD" ) === 400 )
+function test(fn) {
+  console.log(fn("III") === 3);
+  console.log(fn("IV") === 4);
+  console.log(fn("CD") === 400);
 }
 
-test( romanToInt3 )
+test(romanToInt3);

@@ -6,8 +6,8 @@
  *                       otherwise return 0
  * var guess = function(num) {}
  */
-function guess( num ) {
-  return num === guess.target ? 0 : num > guess.target ? -1 : 1
+function guess(num) {
+  return num === guess.target ? 0 : num > guess.target ? -1 : 1;
 }
 
 /**
@@ -16,34 +16,31 @@ function guess( num ) {
  * @return {number}
  * 55ms 37mb
  */
-var guessNumber = function ( n ) {
+var guessNumber = function (n) {
   let left = 1;
   let right = n;
   let mid = 0;
   let result = 0;
-  while ( left <= right ) {
-    mid = Math.floor( (left + right) / 2 )
-    result = guess( mid )
-    if ( result === 0 ) {
-      return mid
+  while (left <= right) {
+    mid = Math.floor((left + right) / 2);
+    result = guess(mid);
+    if (result === 0) {
+      return mid;
     }
-    if ( result === -1 ) {
+    if (result === -1) {
       right = mid - 1;
     } else {
-      left = mid + 1
+      left = mid + 1;
     }
   }
-  return -1
+  return -1;
 };
 
-
-
-
-function test( fn ) {
+function test(fn) {
   guess.target = 6;
-  console.log( fn( 10 ) === guess.target )
-  console.log( fn( 1000 ) === guess.target )
-  console.log( fn( 4000 ) === guess.target )
+  console.log(fn(10) === guess.target);
+  console.log(fn(1000) === guess.target);
+  console.log(fn(4000) === guess.target);
 }
 
-test( guessNumber )
+test(guessNumber);

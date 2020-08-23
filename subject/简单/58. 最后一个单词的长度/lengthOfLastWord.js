@@ -8,40 +8,41 @@
  * @return {number}
  * 84ms 37.2mb
  */
-var lengthOfLastWord = function ( s ) {
-  if ( s === " " || s === "" ) return 0
+var lengthOfLastWord = function (s) {
+  if (s === " " || s === "") return 0;
   let n = 0;
-  for ( let i = s.length - 1; i >= 0; i-- ) {
-    if ( s[ i ] !== " " ) {
-      n++
+  for (let i = s.length - 1; i >= 0; i--) {
+    if (s[i] !== " ") {
+      n++;
     } else {
-      if ( n !== 0 ) {
-        return n
+      if (n !== 0) {
+        return n;
       }
     }
   }
-  return n
+  return n;
 };
 // 84ms 37.9mb
-var lengthOfLastWord2 = function ( s ) {
-  if ( s === " " || s === "" ) return 0
-  let n = 0, l = s.length - 1;
-  while ( s[ l ] === " " ) {
-    l--
+var lengthOfLastWord2 = function (s) {
+  if (s === " " || s === "") return 0;
+  let n = 0,
+    l = s.length - 1;
+  while (s[l] === " ") {
+    l--;
   }
-  while ( s[ l ] !== " " && l >= 0 ) {
-    n++
-    l--
+  while (s[l] !== " " && l >= 0) {
+    n++;
+    l--;
   }
-  return n
+  return n;
 };
 
-function test( fn ) {
-  console.log( fn( "hello World" ) === 5 )
-  console.log( fn( "" ) === 0 )
-  console.log( fn( " " ) === 0 )
-  console.log( fn( "     " ) === 0 )
-  console.log( fn( "World" ) === 5 )
+function test(fn) {
+  console.log(fn("hello World") === 5);
+  console.log(fn("") === 0);
+  console.log(fn(" ") === 0);
+  console.log(fn("     ") === 0);
+  console.log(fn("World") === 5);
 }
 
-test( lengthOfLastWord2 )
+test(lengthOfLastWord2);

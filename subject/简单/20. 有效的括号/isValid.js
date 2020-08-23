@@ -5,29 +5,29 @@
  * @description 使用栈结构  遇到的第一个 right 括号的左边必定位于栈顶\
  * 92ms 38.8mb
  */
-var isValid = function ( s ) {
-  if ( s === "" ) return true
+var isValid = function (s) {
+  if (s === "") return true;
   let stack = [];
   let i = 0;
-  let l = s.length
-  while ( i < l ) {
-    if ( s[ i ] === "(" || s[ i ] === "[" || s[ i ] === "{" ) {
-      stack.push( s[ i ] )
+  let l = s.length;
+  while (i < l) {
+    if (s[i] === "(" || s[i] === "[" || s[i] === "{") {
+      stack.push(s[i]);
     } else {
-      const left = stack.pop()
-      if ( left !== "(" && s[ i ] === ")" ) {
-        return false
+      const left = stack.pop();
+      if (left !== "(" && s[i] === ")") {
+        return false;
       }
-      if ( left !== "[" && s[ i ] === "]" ) {
-        return false
+      if (left !== "[" && s[i] === "]") {
+        return false;
       }
-      if ( left !== "{" && s[ i ] === "}" ) {
-        return false
+      if (left !== "{" && s[i] === "}") {
+        return false;
       }
     }
-    i++
+    i++;
   }
-  return stack.length === 0
+  return stack.length === 0;
 };
 
 /***
@@ -46,19 +46,19 @@ class Solution {
 }
  */
 
-function test( fn ) {
-  console.log( fn( "" ) === true )
-  console.log( fn( "[" ) === true )
-  console.log( fn( "{}" ) === true )
-  console.log( fn( "[]" ) === true )
-  console.log( fn( "()" ) === true )
-  console.log( fn( "((((([])))))" ) === true )
-  console.log( fn( "(]" ) === false )
-  console.log( fn( "()[{}]" ) === true )
-  console.log( fn( "([)]" ) === false )
-  console.log( fn( "(([]{})[]{})" ) === true )
-  console.log( fn( "([{}])" ) === true )
-  console.log( fn( "()[]{}" ) === true )
+function test(fn) {
+  console.log(fn("") === true);
+  console.log(fn("[") === true);
+  console.log(fn("{}") === true);
+  console.log(fn("[]") === true);
+  console.log(fn("()") === true);
+  console.log(fn("((((([])))))") === true);
+  console.log(fn("(]") === false);
+  console.log(fn("()[{}]") === true);
+  console.log(fn("([)]") === false);
+  console.log(fn("(([]{})[]{})") === true);
+  console.log(fn("([{}])") === true);
+  console.log(fn("()[]{}") === true);
 }
 
-test( isValid )
+test(isValid);

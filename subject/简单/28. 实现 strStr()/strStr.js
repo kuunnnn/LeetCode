@@ -23,33 +23,33 @@
  * @return {number}
  * 96ms  37.8mb
  */
-var strStr = function ( haystack, needle ) {
-  if ( needle === "" ) return 0;
-  if ( needle.length > haystack.length ) return -1;
-  if ( needle.length === haystack.length ) return haystack === needle ? 0 : -1;
+var strStr = function (haystack, needle) {
+  if (needle === "") return 0;
+  if (needle.length > haystack.length) return -1;
+  if (needle.length === haystack.length) return haystack === needle ? 0 : -1;
   let hl = haystack.length;
   let nl = needle.length;
   let index = 0;
   let k = 0;
-  for ( let i = 0; i < hl; i++ ) {
-    while ( needle[ 0 ] !== haystack[ index ] && index <= hl - nl ) {
+  for (let i = 0; i < hl; i++) {
+    while (needle[0] !== haystack[index] && index <= hl - nl) {
       index++;
     }
-    if ( index > hl - nl ) {
+    if (index > hl - nl) {
       return -1;
     }
-    for ( let j = 1; j < nl; j++ ) {
-      if ( needle[ j ] !== haystack[ j + index ] ) {
+    for (let j = 1; j < nl; j++) {
+      if (needle[j] !== haystack[j + index]) {
         // 回溯
         index = index + j;
         k = 0;
-        if ( hl - index < nl ) {
+        if (hl - index < nl) {
           return -1;
         }
         break;
       } else {
         k++;
-        if ( k === nl ) {
+        if (k === nl) {
           return index;
         }
       }
@@ -60,8 +60,8 @@ var strStr = function ( haystack, needle ) {
 test();
 
 function test() {
-  console.log( strStr( "mississippi", "pi" ) === 9 );
-  console.log( strStr( "hel1llo", "ll" ) === 4 )
-  console.log( strStr( "hello", "" ) === 0 )
-  console.log( strStr( "aaaaa", "needle" ) === -1 )
+  console.log(strStr("mississippi", "pi") === 9);
+  console.log(strStr("hel1llo", "ll") === 4);
+  console.log(strStr("hello", "") === 0);
+  console.log(strStr("aaaaa", "needle") === -1);
 }

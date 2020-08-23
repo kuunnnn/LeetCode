@@ -11,21 +11,20 @@
  * 80ms  37.8mb
  * 最差情况需要循环 n-1 次
  */
-var searchInsert = function ( nums, target ) {
+var searchInsert = function (nums, target) {
   let i = 0;
-  let j = nums.length - 1
-  if ( target <= nums[ i ] ) return 0
-  if ( target > nums[ j ] ) return j + 1
-  if ( target === nums[ j ] ) return j
-  while ( i < j ) {
-    if ( nums[ i ] >= target ) {
-      return i
+  let j = nums.length - 1;
+  if (target <= nums[i]) return 0;
+  if (target > nums[j]) return j + 1;
+  if (target === nums[j]) return j;
+  while (i < j) {
+    if (nums[i] >= target) {
+      return i;
     }
-    i++
+    i++;
   }
-  return i
+  return i;
 };
-
 
 /**
  * @param {number[]} nums
@@ -34,25 +33,28 @@ var searchInsert = function ( nums, target ) {
  * 88ms 37.5mb
  * 2分
  */
-function searchInsert2( nums, target ) {
+function searchInsert2(nums, target) {
   let n = nums.length;
-  let left = 0, right = n - 1, r = n, mid = 0;
-  while ( left <= right ) {
-    mid = left+Math.floor( ( right-left) / 2 )
-    if ( nums[ mid ] >= target ) {
+  let left = 0,
+    right = n - 1,
+    r = n,
+    mid = 0;
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    if (nums[mid] >= target) {
       r = mid;
-      right = mid-1
+      right = mid - 1;
     } else {
-      left = mid+1
+      left = mid + 1;
     }
   }
-  return r
+  return r;
 }
-test(searchInsert)
+test(searchInsert);
 function test(fn) {
-  console.log( fn( [ 1, 3, 5, 6 ], 5 ) === 2 )
-  console.log( fn( [ 1, 3 ], 2 ) === 1 )
-  console.log( fn( [ 1, 3, 5, 6 ], 2 ) === 1 )
-  console.log( fn( [ 1, 3, 5, 6 ], 7 ) === 4 )
-  console.log( fn( [ 1, 3, 5, 6 ], 0 ) === 0 )
+  console.log(fn([1, 3, 5, 6], 5) === 2);
+  console.log(fn([1, 3], 2) === 1);
+  console.log(fn([1, 3, 5, 6], 2) === 1);
+  console.log(fn([1, 3, 5, 6], 7) === 4);
+  console.log(fn([1, 3, 5, 6], 0) === 0);
 }

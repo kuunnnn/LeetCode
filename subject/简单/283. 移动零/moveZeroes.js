@@ -10,23 +10,24 @@ import { expect } from "../../../utils/test-util.mjs";
  * k移动到下一个非 0 位置
  * 如果 i!==k 表示中间有 0 i=k k=0
  */
-var moveZeroes = function ( nums ) {
-  if ( nums.length === 0 ) return
+var moveZeroes = function (nums) {
+  if (nums.length === 0) return;
   let high = nums.length - 1;
-  let i = 0, k = 0;
-  while ( nums[ i ] !== 0 && i < high ) {
-    i++
-    k++
+  let i = 0,
+    k = 0;
+  while (nums[i] !== 0 && i < high) {
+    i++;
+    k++;
   }
-  while ( i < high && k < high ) {
-    while ( nums[ k ] === 0 && k < high ) {
-      k++
+  while (i < high && k < high) {
+    while (nums[k] === 0 && k < high) {
+      k++;
     }
-    if ( k > i ) {
-      nums[ i ] = nums[ k ]
-      nums[ k ] = 0
+    if (k > i) {
+      nums[i] = nums[k];
+      nums[k] = 0;
     }
-    i += 1
+    i += 1;
   }
 };
 
@@ -34,17 +35,17 @@ var moveZeroes = function ( nums ) {
  * 快慢指针 2
  * @param {number[]} nums
  */
-function moveZeroes2( nums ) {
-  if ( nums.length === 0 ) return
-  const size = nums.length
+function moveZeroes2(nums) {
+  if (nums.length === 0) return;
+  const size = nums.length;
   let k = 0;
-  for ( let i = 0; i < size; i++ ) {
-    if ( nums[ i ] !== 0 ) {
-      nums[ k++ ] = nums[ i ]
+  for (let i = 0; i < size; i++) {
+    if (nums[i] !== 0) {
+      nums[k++] = nums[i];
     }
   }
-  for ( ; k < size; k++ ) {
-    nums[ k ] = 0
+  for (; k < size; k++) {
+    nums[k] = 0;
   }
 }
 
@@ -52,34 +53,33 @@ function moveZeroes2( nums ) {
  * 快慢指针 2
  * @param {number[]} nums
  */
-function moveZeroes3( nums ) {
-  if ( nums.length === 0 ) return
-  for ( let i = 0, k = 0, size = nums.length; i < size; i++ ) {
-    if ( nums[ i ] !== 0 ) {
-      const temp = nums[ k ]
-      nums[ k++ ] = nums[ i ]
-      nums[ i ] = temp
+function moveZeroes3(nums) {
+  if (nums.length === 0) return;
+  for (let i = 0, k = 0, size = nums.length; i < size; i++) {
+    if (nums[i] !== 0) {
+      const temp = nums[k];
+      nums[k++] = nums[i];
+      nums[i] = temp;
     }
   }
 }
 
+test(moveZeroes3);
 
-test( moveZeroes3 )
-
-function test( fn ) {
-  let array = [ 1, 2, 3, 4 ];
-  fn( array )
-  expect( array, [ 1, 2, 3, 4 ] )
-  array = [ 1, 2, 3, 4, 0, 0, 0 ]
-  fn( array )
-  expect( array, [ 1, 2, 3, 4, 0, 0, 0 ] )
-  array = [ 5, 6, 0, 0, 0, 1, 2, 3 ]
-  fn( array )
-  expect( array, [ 5, 6, 1, 2, 3, 0, 0, 0 ] )
-  array = [ 0, 0, 0, 1, 1, 1, 2 ]
-  fn( array )
-  expect( array, [ 1, 1, 1, 2, 0, 0, 0 ] )
-  array = [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ]
-  fn( array )
-  expect( array, [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ] )
+function test(fn) {
+  let array = [1, 2, 3, 4];
+  fn(array);
+  expect(array, [1, 2, 3, 4]);
+  array = [1, 2, 3, 4, 0, 0, 0];
+  fn(array);
+  expect(array, [1, 2, 3, 4, 0, 0, 0]);
+  array = [5, 6, 0, 0, 0, 1, 2, 3];
+  fn(array);
+  expect(array, [5, 6, 1, 2, 3, 0, 0, 0]);
+  array = [0, 0, 0, 1, 1, 1, 2];
+  fn(array);
+  expect(array, [1, 1, 1, 2, 0, 0, 0]);
+  array = [0, 0, 0, 1, 1, 1, 0, 0, 0];
+  fn(array);
+  expect(array, [1, 1, 1, 0, 0, 0, 0, 0, 0]);
 }

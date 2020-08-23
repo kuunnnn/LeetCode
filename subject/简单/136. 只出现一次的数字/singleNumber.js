@@ -22,20 +22,19 @@
     3. 异或运算满足交换律和结合律，a ^ b ^ c <=> a ^ c ^ b
  * 88ms 38.7mb
  */
-var singleNumber = function ( nums ) {
-  if ( nums.length === 0 ) return 0
-  let result = nums[ 0 ];
-  for ( let i = 1, len = nums.length; i < len; i++ ) {
-    result ^= nums[ i ]
+var singleNumber = function (nums) {
+  if (nums.length === 0) return 0;
+  let result = nums[0];
+  for (let i = 1, len = nums.length; i < len; i++) {
+    result ^= nums[i];
   }
-  return result
+  return result;
 };
 
-
-function test( fn ) {
-  console.log( fn( [] ) === 0 )
-  console.log( fn( [ 2, 2, 1 ] ) === 1 )
-  console.log( fn( [ 4, 1, 2, 1, 2 ] ) === 4 )
+function test(fn) {
+  console.log(fn([]) === 0);
+  console.log(fn([2, 2, 1]) === 1);
+  console.log(fn([4, 1, 2, 1, 2]) === 4);
 }
 
-test( singleNumber )
+test(singleNumber);

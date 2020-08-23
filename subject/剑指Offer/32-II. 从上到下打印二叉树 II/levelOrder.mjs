@@ -13,33 +13,33 @@ import { buildTree, expect } from "../../../utils/test-util.mjs";
  * 广度优先遍历
  * 100ms 39.4mb
  */
-var levelOrder = function ( root ) {
-  if ( root === null ) return []
-  const queue = [ [ root ] ];
+var levelOrder = function (root) {
+  if (root === null) return [];
+  const queue = [[root]];
   const result = [];
   let nextLevel = [];
   let currentLevel = [];
   let currentValue = [];
-  while ( queue.length !== 0 ) {
+  while (queue.length !== 0) {
     nextLevel = [];
     currentValue = [];
-    currentLevel = queue.shift()
-    if ( currentLevel.length === 0 ) {
+    currentLevel = queue.shift();
+    if (currentLevel.length === 0) {
       break;
     }
-    for ( let node of currentLevel ) {
-      currentValue.push( node.val )
-      if ( node.left !== null ) nextLevel.push( node.left )
-      if ( node.right !== null ) nextLevel.push( node.right )
+    for (let node of currentLevel) {
+      currentValue.push(node.val);
+      if (node.left !== null) nextLevel.push(node.left);
+      if (node.right !== null) nextLevel.push(node.right);
     }
-    result.push( currentValue )
-    queue.push( nextLevel )
+    result.push(currentValue);
+    queue.push(nextLevel);
   }
-  return result
+  return result;
 };
 
-
-expect(
-  levelOrder( buildTree( [ 3, 9, 20, null, null, 15, 7 ] ) ),
-  [ [ 3 ], [ 9, 20 ], [ 15, 7 ] ]
-)
+expect(levelOrder(buildTree([3, 9, 20, null, null, 15, 7])), [
+  [3],
+  [9, 20],
+  [15, 7],
+]);
