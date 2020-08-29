@@ -1,8 +1,8 @@
-export default {
-  topic: [
+export default{
+  "topic": [
     {
-      title: "简单",
-      children: [
+      "title": "简单",
+      "children": [
         "[1. 两数之和](./subject/简单/1.%20两数之和/twoSum.js)",
         "[104. 二叉树的最大深度](./subject/简单/104.%20二叉树的最大深度/maxDepth.js)",
         "[107. 二叉树的层次遍历 II](./subject/简单/107.%20二叉树的层次遍历%20II/levelOrderBottom.js)",
@@ -42,13 +42,15 @@ export default {
         "[744. 寻找比目标字母大的最小字母](./subject/简单/744.%20寻找比目标字母大的最小字母/nextGreatestLetter.js)",
         "[852. 山脉的峰顶索引](./subject/简单/852.%20山脉的峰顶索引/peakIndexInMountainArray.js)",
         "[88. 合并两个有序数组](./subject/简单/88.%20合并两个有序数组/merge.js)",
-        "[9. 回文数](./subject/简单/9.%20回文数/isPalindrome.js)",
-      ],
+        "[9. 回文数](./subject/简单/9.%20回文数/isPalindrome.js)"
+      ]
     },
     {
-      title: "中等",
-      children: [
+      "title": "中等",
+      "children": [
         "[102. 二叉树的层次遍历](./subject/中等/102.%20二叉树的层次遍历/levelOrder.js)",
+        "[105. 从前序和中序遍历序列构建二叉树](./subject/中等/105.%20从前序和中序遍历序列构建二叉树/buildTree.js)",
+        "[106. 从中序和后序遍历序列构建二叉树](./subject/中等/106.%20从中序和后序遍历序列构建二叉树/buildTree.js)",
         "[12. 整数转罗马数字](./subject/中等/12.%20整数转罗马数字/intToRoman.js)",
         "[144. 二叉树的前序遍历](./subject/中等/144.%20二叉树的前序遍历/preorderTraversal.js)",
         "[15. 三数之和](./subject/中等/15.%20三数之和/threeSum.js)",
@@ -60,37 +62,39 @@ export default {
         "[429. N叉树的层序遍历](./subject/中等/429.%20N叉树的层序遍历/levelOrder.js)",
         "[655. 输出二叉树](./subject/中等/655.%20输出二叉树/printTree.js)",
         "[8. 字符串转换整数](./subject/中等/8.%20字符串转换整数/atoi.js)",
-        "[94. 二叉树的中序遍历](./subject/中等/94.%20二叉树的中序遍历/inorderTraversal.js)",
-      ],
+        "[889. 根据前序和后序遍历二叉树](./subject/中等/889.%20根据前序和后序遍历二叉树/constructFromPrePost.js)",
+        "[94. 二叉树的中序遍历](./subject/中等/94.%20二叉树的中序遍历/inorderTraversal.js)"
+      ]
     },
     {
-      title: "困难",
-      children: [
+      "title": "困难",
+      "children": [
         "[145. 二叉树的后序遍历](./subject/困难/145.%20二叉树的后序遍历/postorderTraversal.js)",
         "[154. 寻找旋转数组中的最小值 II](./subject/困难/154.%20寻找旋转数组中的最小值%20II/findMin.js)",
         "[25. k 个一组翻转链表](./subject/困难/25.%20k%20个一组翻转链表/reverseKGroup.js)",
-        "[4. 寻找两个有序数组的中位数](./subject/困难/4.%20寻找两个有序数组的中位数/findMedianSortedArrays.js)",
-      ],
+        "[4. 寻找两个有序数组的中位数](./subject/困难/4.%20寻找两个有序数组的中位数/findMedianSortedArrays.js)"
+      ]
     },
     {
-      title: "面试题",
-      children: [
+      "title": "面试题",
+      "children": [
         "[08.03. 魔术索引](./subject/面试题/08.03.%20魔术索引/findMagicIndex.js)",
-        "[10.05. 稀疏数组搜索](./subject/面试题/10.05.%20稀疏数组搜索/findString.js)",
-      ],
+        "[10.05. 稀疏数组搜索](./subject/面试题/10.05.%20稀疏数组搜索/findString.js)"
+      ]
     },
     {
-      title: "剑指Offer",
-      children: [
+      "title": "剑指Offer",
+      "children": [
         "[11. 旋转数组的最小数字](./subject/剑指Offer/11.%20旋转数组的最小数字/minArray.js)",
+        "[25. 合并两个排序的链表](./subject/剑指Offer/25.%20合并两个排序的链表/mergeTwoLists.js)",
         "[32-I. 从上到下打印二叉树](./subject/剑指Offer/32-I.%20从上到下打印二叉树/levelOrder.js)",
         "[32-II. 从上到下打印二叉树 II](./subject/剑指Offer/32-II.%20从上到下打印二叉树%20II/levelOrder.mjs)",
         "[32-III. 从上到下打印二叉树 III](./subject/剑指Offer/32-III.%20从上到下打印二叉树%20III/levelOrder.js)",
         "[53-I. 在排序数组中查找数组 I](./subject/剑指Offer/53-I.%20在排序数组中查找数组%20I/search.js)",
         "[53-II. 0~n-1中缺失的数字](./subject/剑指Offer/53-II.%200~n-1中缺失的数字/missingNumber.js)",
-        "[55-I. 二叉树的深度](./subject/剑指Offer/55-I.%20二叉树的深度/maxDepth.js)",
-      ],
-    },
+        "[55-I. 二叉树的深度](./subject/剑指Offer/55-I.%20二叉树的深度/maxDepth.js)"
+      ]
+    }
   ],
-  size: 66,
-};
+  "size": 70
+}

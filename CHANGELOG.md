@@ -84,3 +84,25 @@
 - [217. 存在重复元素](./subject/简单/217.%20存在重复元素/containsDuplicate.js)
 - [219. 存在重复元素 II](./subject/简单/219.%20存在重复元素%20II/containsNearbyDuplicate.js)
 - [283. 移动零](./subject/简单/283.%20移动零/moveZeroes.js)
+
+## <small>新增4题(2020-08-29)</small>
+
+
+**简单**
+
+
+**中等**
+
+- [105. 从前序和中序遍历序列构建二叉树](./subject/中等/105.%20从前序和中序遍历序列构建二叉树/buildTree.js)
+- [106. 从中序和后序遍历序列构建二叉树](./subject/中等/106.%20从中序和后序遍历序列构建二叉树/buildTree.js)
+- [889. 根据前序和后序遍历二叉树](./subject/中等/889.%20根据前序和后序遍历二叉树/constructFromPrePost.js)
+
+**困难**
+
+
+**面试题**
+
+
+**剑指Offer**
+
+- [25. 合并两个排序的链表](./subject/剑指Offer/25.%20合并两个排序的链表/mergeTwoLists.js)

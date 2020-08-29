@@ -1,5 +1,6 @@
 # LeetCode 解题笔记
 
+
 ## 简单 ( 40 题 )
 
 - [1. 两数之和](./subject/简单/1.%20两数之和/twoSum.js)
@@ -20,7 +21,7 @@
 - [26. 删除排序数组中的重复项](./subject/简单/26.%20删除排序数组中的重复项/removeDuplicates.js)
 - [27. 移除元素](./subject/简单/27.%20移除元素/removeElement.go)
 - [278. 第一个错误的版本](./subject/简单/278.%20第一个错误的版本/solution.js)
-- [28. 实现 strStr()](<./subject/简单/28.%20实现%20strStr()/strStr.js>)
+- [28. 实现 strStr()](./subject/简单/28.%20实现%20strStr()/strStr.js)
 - [283. 移动零](./subject/简单/283.%20移动零/moveZeroes.js)
 - [349. 两个数组的交集](./subject/简单/349.%20两个数组的交集/intersection.js)
 - [35. 搜索插入位置](./subject/简单/35.%20搜索插入位置/searchInsert.js)
@@ -33,9 +34,9 @@
 - [555. N 叉树的最大深度](./subject/简单/555.%20N%20叉树的最大深度/maxDepth.mjs)
 - [58. 最后一个单词的长度](./subject/简单/58.%20最后一个单词的长度/lengthOfLastWord.js)
 - [589. N 叉树的前序遍历](./subject/简单/589.%20N%20叉树的前序遍历/preorder.js)
-- [590. N 叉树的后序遍历](./subject/简单/590.%20N叉树的后序遍历/postorder.js)
+- [590. N叉树的后序遍历](./subject/简单/590.%20N叉树的后序遍历/postorder.js)
 - [66. 加一](./subject/简单/66.%20加一/plusOne.js)
-- [69. x 的平方根](./subject/简单/69.%20x的平方根/mySqrt.js)
+- [69. x的平方根](./subject/简单/69.%20x的平方根/mySqrt.js)
 - [7. 整数反转](./subject/简单/7.%20整数反转/reverse.js)
 - [704. 二分查找](./subject/简单/704.%20二分查找/search.js)
 - [744. 寻找比目标字母大的最小字母](./subject/简单/744.%20寻找比目标字母大的最小字母/nextGreatestLetter.js)
@@ -43,9 +44,11 @@
 - [88. 合并两个有序数组](./subject/简单/88.%20合并两个有序数组/merge.js)
 - [9. 回文数](./subject/简单/9.%20回文数/isPalindrome.js)
 
-## 中等 ( 13 题 )
+## 中等 ( 16 题 )
 
 - [102. 二叉树的层次遍历](./subject/中等/102.%20二叉树的层次遍历/levelOrder.js)
+- [105. 从前序和中序遍历序列构建二叉树](./subject/中等/105.%20从前序和中序遍历序列构建二叉树/buildTree.js)
+- [106. 从中序和后序遍历序列构建二叉树](./subject/中等/106.%20从中序和后序遍历序列构建二叉树/buildTree.js)
 - [12. 整数转罗马数字](./subject/中等/12.%20整数转罗马数字/intToRoman.js)
 - [144. 二叉树的前序遍历](./subject/中等/144.%20二叉树的前序遍历/preorderTraversal.js)
 - [15. 三数之和](./subject/中等/15.%20三数之和/threeSum.js)
@@ -54,9 +57,10 @@
 - [2. 两数相加](./subject/中等/2.%20两数相加/addTwoNumbers.js)
 - [33. 搜索旋转排序数组](./subject/中等/33.%20搜索旋转排序数组/search.js)
 - [34. 在排序数组中查找元素的第一个和最后一个位置](./subject/中等/34.%20在排序数组中查找元素的第一个和最后一个位置/searchRange.js)
-- [429. N 叉树的层序遍历](./subject/中等/429.%20N叉树的层序遍历/levelOrder.js)
+- [429. N叉树的层序遍历](./subject/中等/429.%20N叉树的层序遍历/levelOrder.js)
 - [655. 输出二叉树](./subject/中等/655.%20输出二叉树/printTree.js)
 - [8. 字符串转换整数](./subject/中等/8.%20字符串转换整数/atoi.js)
+- [889. 根据前序和后序遍历二叉树](./subject/中等/889.%20根据前序和后序遍历二叉树/constructFromPrePost.js)
 - [94. 二叉树的中序遍历](./subject/中等/94.%20二叉树的中序遍历/inorderTraversal.js)
 
 ## 困难 ( 04 题 )
@@ -71,12 +75,13 @@
 - [08.03. 魔术索引](./subject/面试题/08.03.%20魔术索引/findMagicIndex.js)
 - [10.05. 稀疏数组搜索](./subject/面试题/10.05.%20稀疏数组搜索/findString.js)
 
-## 剑指 Offer ( 07 题 )
+## 剑指Offer ( 08 题 )
 
 - [11. 旋转数组的最小数字](./subject/剑指Offer/11.%20旋转数组的最小数字/minArray.js)
+- [25. 合并两个排序的链表](./subject/剑指Offer/25.%20合并两个排序的链表/mergeTwoLists.js)
 - [32-I. 从上到下打印二叉树](./subject/剑指Offer/32-I.%20从上到下打印二叉树/levelOrder.js)
 - [32-II. 从上到下打印二叉树 II](./subject/剑指Offer/32-II.%20从上到下打印二叉树%20II/levelOrder.mjs)
 - [32-III. 从上到下打印二叉树 III](./subject/剑指Offer/32-III.%20从上到下打印二叉树%20III/levelOrder.js)
 - [53-I. 在排序数组中查找数组 I](./subject/剑指Offer/53-I.%20在排序数组中查找数组%20I/search.js)
-- [53-II. 0~n-1 中缺失的数字](./subject/剑指Offer/53-II.%200~n-1中缺失的数字/missingNumber.js)
+- [53-II. 0~n-1中缺失的数字](./subject/剑指Offer/53-II.%200~n-1中缺失的数字/missingNumber.js)
 - [55-I. 二叉树的深度](./subject/剑指Offer/55-I.%20二叉树的深度/maxDepth.js)
