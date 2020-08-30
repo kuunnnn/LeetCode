@@ -106,3 +106,28 @@
 **剑指Offer**
 
 - [25. 合并两个排序的链表](./subject/剑指Offer/25.%20合并两个排序的链表/mergeTwoLists.js)
+
+## <small>新增7题(2020-08-30)</small>
+
+
+**简单**
+
+- [258. 各位相加](./subject/简单/258.%20各位相加/addDigits.js)
+- [268. 缺失数字](./subject/简单/268.%20缺失数字/missingNumber.js)
+- [299. 猜数字游戏](./subject/简单/299.%20猜数字游戏/getHint.js)
+- [303. 区域和检索-数组不可变](./subject/简单/303.%20区域和检索-数组不可变/sumRange.js)
+- [326. 3的幂](./subject/简单/326.%203的幂/isPowerOfThree.js)
+- [414. 第三大的数](./subject/简单/414.%20第三大的数/thirdMax.js)
+- [485. 最大连续 1 的个数](./subject/简单/485.%20最大连续%201%20的个数/findMaxConsecutiveOnes.js)
+
+**中等**
+
+
+**困难**
+
+
+**面试题**
+
+
+**剑指Offer**
+
