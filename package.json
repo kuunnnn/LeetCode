@@ -6,7 +6,8 @@
   "scripts": {
     "release": "standard-version",
     "up1": "node generate.js update-change",
-    "up2": "node generate.js update-readme"
+    "up2": "node generate.js update-readme",
+    "commit": "npm run up2 && npm run up1"
   },
   "devDependencies": {
     "commitizen": "^4.0.3",

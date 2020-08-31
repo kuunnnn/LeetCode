@@ -1,7 +1,7 @@
 # LeetCode 解题笔记
 
 
-## 简单 ( 47 题 )
+## 简单 ( 50 题 )
 
 - [1. 两数之和](./subject/简单/1.%20两数之和/twoSum.js)
 - [104. 二叉树的最大深度](./subject/简单/104.%20二叉树的最大深度/maxDepth.js)
@@ -12,7 +12,9 @@
 - [1351. 统计有序矩阵中的负数](./subject/简单/1351.%20统计有序矩阵中的负数/countNegatives.js)
 - [136. 只出现一次的数字](./subject/简单/136.%20只出现一次的数字/singleNumber.js)
 - [14. 最长公共前缀](./subject/简单/14.%20最长公共前缀/longestCommonPrefix.js)
+- [155. 最小栈](./subject/简单/155.%20最小栈/minStack.js)
 - [167. 两数之和 II - 输入有序数组](./subject/简单/167.%20两数之和%20II%20-%20输入有序数组/twoSum.js)
+- [169. 多数元素](./subject/简单/169.%20多数元素/majorityElement.js)
 - [189. 旋转数组](./subject/简单/189.%20旋转数组/rotate.js)
 - [20. 有效的括号](./subject/简单/20.%20有效的括号/isValid.js)
 - [21. 合并两个有序链表](./subject/简单/21.%20合并两个有序链表/mergeTwoLists.js)
@@ -47,6 +49,7 @@
 - [7. 整数反转](./subject/简单/7.%20整数反转/reverse.js)
 - [704. 二分查找](./subject/简单/704.%20二分查找/search.js)
 - [744. 寻找比目标字母大的最小字母](./subject/简单/744.%20寻找比目标字母大的最小字母/nextGreatestLetter.js)
+- [83. 删除排序链表中的重复元素](./subject/简单/83.%20删除排序链表中的重复元素/deleteDuplicates.js)
 - [852. 山脉的峰顶索引](./subject/简单/852.%20山脉的峰顶索引/peakIndexInMountainArray.js)
 - [88. 合并两个有序数组](./subject/简单/88.%20合并两个有序数组/merge.js)
 - [9. 回文数](./subject/简单/9.%20回文数/isPalindrome.js)
