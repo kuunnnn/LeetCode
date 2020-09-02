@@ -1,7 +1,7 @@
 # LeetCode 解题笔记
 
 
-## 简单 ( 50 题 )
+## 简单 ( 51 题 )
 
 - [1. 两数之和](./subject/简单/1.%20两数之和/twoSum.js)
 - [104. 二叉树的最大深度](./subject/简单/104.%20二叉树的最大深度/maxDepth.js)
@@ -36,6 +36,7 @@
 - [367. 有效的完全平方数](./subject/简单/367.%20有效的完全平方数/isPerfectSquare.js)
 - [374. 猜数字大小](./subject/简单/374.%20猜数字大小/guessNumber.js)
 - [392. 判断子序列](./subject/简单/392.%20判断子序列/isSubsequence.js)
+- [404. 左叶子之和](./subject/简单/404.%20左叶子之和/sumOfLeftLeaves.js)
 - [414. 第三大的数](./subject/简单/414.%20第三大的数/thirdMax.js)
 - [441. 排列硬币](./subject/简单/441.%20排列硬币/arrangeCoins.js)
 - [475. 供暖器](./subject/简单/475.%20供暖器/findRadius.js)
