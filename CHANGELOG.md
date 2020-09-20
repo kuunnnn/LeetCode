@@ -171,3 +171,29 @@
 
 **剑指Offer**
 
+
+## <small>新增8题(2020-09-20)</small>
+
+
+**简单**
+
+- [100. 相同的树](./subject/简单/100.%20相同的树/isSameTree.js)
+- [110. 平衡二叉树](./subject/简单/110.%20平衡二叉树/isBalanced.js)
+- [112. 路径总和](./subject/简单/112.%20路径总和/hasPathSum.js)
+- [141. 环形链表](./subject/简单/141.%20环形链表/hasCycle.js)
+- [389. 找不同](./subject/简单/389.%20找不同/findTheDifference.js)
+- [405. 数字转换为十六进制数](./subject/简单/405.%20数字转换为十六进制数/toHex.js)
+- [509. 斐波那契数](./subject/简单/509.%20斐波那契数/fib.js)
+- [70. 爬楼梯](./subject/简单/70.%20爬楼梯/climbStairs.js)
+
+**中等**
+
+
+**困难**
+
+
+**面试题**
+
+
+**剑指Offer**
+
